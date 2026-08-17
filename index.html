@@ -1,1 +1,48 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#071b24"><meta name="description" content="輕量 4X"><title>島鏈紀元</title><link rel="stylesheet" href="./styles.css"></head><body><main><header><div><small>輕量 4X</small><h1>島鏈紀元</h1></div><button id="sound" aria-pressed="true">♫ 音效</button></header><section id="lobby" class="panel hero"><div class="sigil">✦</div><p>一局 5–10 分鐘。系統會把戰績保存到你的場域 KV。</p><p>最佳紀錄 <strong id="best">0</strong></p><button id="start" class="primary">開始新局</button><a href="./ATTRIBUTION.md">製作與署名</a></section><section id="game" hidden><div id="hud" class="hud"></div><section id="board" class="board" aria-label="遊戲盤面"></section><p id="msg" class="msg" aria-live="polite"></p><div id="actions" class="actions"></div></section></main><script type="module" src="./app.js"></script></body></html>
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#071b24" />
+    <meta name="description" content="島鏈紀元 — 探索、擴張、開發、征服的輕量 4X" />
+    <title>島鏈紀元</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <small>輕量 4X</small>
+          <h1>島鏈紀元</h1>
+        </div>
+        <button id="sound" type="button" aria-pressed="true">♫ 音效</button>
+      </header>
+
+      <section id="lobby" class="panel hero">
+        <div class="sigil"><img src="./assets/icons/camp.png" width="72" height="72" alt="" /></div>
+        <p>在島鏈上探索迷霧、殖民中立港、建造農場與船塢，並以艦隊征服敵國。稱霸 55% 島嶼、擊陷敵都，或在 35 回合內分數領先即可獲勝。</p>
+        <p>最佳 <strong id="best">0</strong> · 勝場 <strong id="wins">0</strong></p>
+        <button id="start" type="button" class="primary">開始新局</button>
+        <a id="credits" href="./ATTRIBUTION.md">製作與署名</a>
+        <aside id="credits-panel" class="credits" hidden>
+          <p>美術 Kenney Board Game Icons · 音效 Kenney Interface／RPG · BGM Blippy Bits Dew</p>
+          <p>詳見 ATTRIBUTION.md</p>
+        </aside>
+      </section>
+
+      <section id="game" hidden>
+        <div id="hud" class="hud" aria-label="狀態列"></div>
+        <div id="resources" class="resources" aria-label="資源"></div>
+        <div id="modes" class="modes" aria-label="4X 模式"></div>
+        <section id="board" class="board" aria-label="島鏈地圖"></section>
+        <p id="msg" class="msg" aria-live="polite"></p>
+        <div class="controls">
+          <button id="end-turn" type="button" class="primary">結束回合</button>
+        </div>
+      </section>
+
+      <p id="toast" class="toast" hidden role="status"></p>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
